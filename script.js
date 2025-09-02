@@ -24,10 +24,11 @@ function playerData(playerName = "Player One",chips=400){
     }
     const addCard=() => {
         const newcard=randomize()
+        const playerTotal=document.querySelector('#ptotal');
         if(sum()<=21){
             player.cards.push(newcard);
             sum()
-            console.log(`You drew ${newcard} total is: ${sum()}`);
+            playerTotal.textContent=`Yow Drew ${newcard} new total: ${sum()}`;
         }else{
             throw Error('Check your Sum');
         }
@@ -145,6 +146,11 @@ start.addEventListener('click', () => {
     player1.initialCards();
     dealer1.dealerCard();
     playerInfo();
+})
+
+const reset=document.querySelector('#reset');
+reset.addEventListener('click', () => {
+    window.location.reload();
 })
 
 const newcard=document.querySelector('#addCard');

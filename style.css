@@ -1,5 +1,36 @@
+*{
+    font-family: Helvetica, sans-serif;
+    color: white;   
+}
 body{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    background: url(table.jpeg);
+    background-size: cover;
+}
+h1{
+    color: goldenrod;
+}
+button{
+    color: #016f32;
+    background-color: goldenrod;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.playArea{
+    grid-column: 2/3;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+}
+.result{
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+   
 }
